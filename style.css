@@ -1,6 +1,6 @@
-body {-webkit-animation: pulse 10s infinite;animation: pulse 10s infinite;}
+body {-webkit-animation: pulse 5s infinite;animation: pulse 5s infinite;}
 
-@-webkit-keyframes pulse {
+@-we/*bkit-keyframes pulse {
     0% {background:#f44336}
     25% {background:#e91e63}
     50% {background:#9c2780}
@@ -14,4 +14,31 @@ body {-webkit-animation: pulse 10s infinite;animation: pulse 10s infinite;}
     50% {background:#9c2780}
     75% {background:#673ab7}
     100% {background:#f44336}
+}*/
+
+@-webkit-keyframes pulse {
+    0% {background:#93d3ff}
+    25% {background:#db6dff}
+    50% {background:#e05b87}
+    75% {background:#5be0a9}
+    100% {background:#93d3ff}
+}
+
+@keyframes pulse {
+    0% {background:#93d3ff}
+    25% {background:#db6dff}
+    50% {background:#e05b87}
+    75% {background:#5be0a9}
+    100% {background:#93d3ff}
+}
+
+body {
+    margin:50px 0; 
+    padding:0;
+    text-align:center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
