@@ -1,4 +1,16 @@
-body {}
+body {
+    -webkit-animation: pulse 10s infinite;
+    animation: pulse 10s infinite;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin:50px 0; 
+    padding:0;
+    text-align:center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 @-webkit-keyframes pulse {
     0% {background:#151515}
@@ -14,19 +26,4 @@ body {}
     50% {background:#eeeeee}
     75% {background:#43434e}
     100% {background:#151515}
-}
-
-
-body {
-    -webkit-animation: pulse 10s infinite;
-    animation: pulse 10s infinite;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    margin:50px 0; 
-    padding:0;
-    text-align:center;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }
