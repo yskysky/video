@@ -12,6 +12,15 @@ img {
     height: auto;
 }
 
+video {
+    max-width: 500px;
+    z-index: -100;
+}
+
+img, video {
+    pointer-events: none;
+}
+
 @-webkit-keyframes pulse {
     0% {background:#151515}
     25% {background:#d5456d}
@@ -26,4 +35,22 @@ img {
     50% {background:#eeeeee}
     75% {background:#43434e}
     100% {background:#151515}
+}
+
+
+.glow {
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: glow;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-name: glow;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+}
+
+@-webkit-keyframes glow {
+    from { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 10px white; }
 }
