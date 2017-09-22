@@ -50,6 +50,10 @@ img, video {
 
 }
 
+#currentTime{
+    color: white;
+}
+
 @-webkit-keyframes glow {
     from { text-shadow: 0 0 10px white; }
     to { text-shadow: 0 0 10px white; }
