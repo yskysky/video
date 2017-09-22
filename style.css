@@ -39,11 +39,11 @@ img, video {
 
 
 .glow {
-    -webkit-animation-duration: 0.5s;
+    -webkit-animation-duration: 1s;
     -webkit-animation-name: glow;
     -webkit-animation-direction: alternate;
     -webkit-animation-iteration-count: infinite;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-name: glow;
     animation-direction: alternate;
     animation-iteration-count: infinite;
@@ -51,12 +51,12 @@ img, video {
 
 @-webkit-keyframes glow {
     from { text-shadow: 0 0 10px white; }
-    to { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 6px white; }
 }
 
 @keyframes glow {
     from { text-shadow: 0 0 10px white; }
-    to { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 6px white; }
 }
 
 .whitetext{
