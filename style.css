@@ -6,7 +6,7 @@ body {
     padding:0;
     text-align:center;
 }
-t
+
 img {
     max-width: 100%;
     height: auto;
@@ -47,7 +47,6 @@ img, video {
     animation-name: glow;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-
 }
 
 .whitetext{
