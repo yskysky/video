@@ -1,25 +1,51 @@
 body {
     -webkit-animation: pulse 8s infinite;
     animation: pulse 8s infinite;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    margin:50px 0; 
+    margin:0;
+    border:0; 
     padding:0;
-    text-align:center;
 }
 
-img {
-    max-width: 800px;
-    height: auto;
-}
-
-video {
-    max-width: 500px;
-    z-index: -100;
-}
-
-video {
+img, video {
     pointer-events: none;
 }
+
+#layers {
+  border:0;
+  /*position: relative;*/
+}
+
+.top {
+  border: 0;
+  z-index: 1;
+}
+
+.middle {
+  border: 0;
+  z-index: 0;
+}
+
+.bottom {
+  border: 1px solid #0f0;
+  z-index: -1;
+}
+
+.pin {
+    /*min-width: 100%;*/
+    max-width: 200px;
+    height: auto;
+    top: 15px;
+    right: 15px;
+    position: fixed;
+}
+
+.full {
+    min-width: 100%;
+    /*max-width: 600px;*/
+    height: auto;
+    position: relative;
+}
+
 
 @-webkit-keyframes pulse {
     0% {background:#151515}
@@ -61,8 +87,5 @@ video {
 
 .whitetext{
     color: white;
-}
-.redtext{
-    color: red;
 }
 
