@@ -31,11 +31,16 @@ img, video {
 }
 
 .pin {
-    /*min-width: 100%;*/
     max-width: 200px;
     height: auto;
     top: 15px;
     right: 15px;
+    position: fixed;
+}
+
+.home{
+    top: 15px;
+    left: 15px;
     position: fixed;
 }
 
