@@ -2,91 +2,56 @@
 <html>
     <head>
         <link href="style.css" rel="stylesheet">
-        <link rel="icon" href="weather64.png">
         <script src="jq.js"></script>
-        <script src="moments.js"></script>
-
-        <title>Top 10 Reasons Why Sky</title>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <title>Asha Sheshadri</title>
     </head>
     <body>
-        <h1>Hello, it's <span id="currentTime" class="glow whitetext"></span> <span id="currentDate"></span></h1>
+        <div class="center">
+            <iframe src="https://player.vimeo.com/video/214419891?color=ffffff&title=0&byline=0&portrait=0&background=1&autoplay=0&loop=0&mute=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div class="button">
+        </div>
 
-        <h2><i>my name is sky</i></h2>
-        Welcome to my website.
-        <br>
-        Send me mail at <a href="mailto:ysky125@gmail.com" class="glow">no@no.com</a>
-
-        <br>
-        <br>
-        <br>
-
-        <p><a href="melt"><img src="melt.jpg" style="width: 300px"></a>
-        <p><a href="melt" class="redtext">MELT</span></a>
-        <br>
-
-        <p><img src="megafear.jpg">
-        <p>megafear
-        <br>
-
-        <p><img src="통영반.png" style="width: 600px">
-        <p>통영반
-        <br>
-
-        <p><video autoplay loop muted>
-            <source src="whoops.webm" type='video/webm'>
-        </video>
-        <p> whoops
-        <br>    
-
-        <p><img src="crying_manga.jpg">
-        <p>!#$%!@#$!^%!#$!@$^!%
-        <br>
-
-        <p>
-        <audio controls preload>
-        <source src="organ_jam.mp3" type="audio/mpeg">
-        no
-        </audio>
-        <p>organ jam
-        <br>
-
-        <p><img src="final-1.jpg">
-        <p><img src="final-2.jpg">
-        <p><img src="final-3.jpg">
-        <p>Installation of <b>Self-Portrait</b> @ Charles Addams Gallery
-        <br>2017
-
-        <p><img src="etecsa-1.jpg">
-        <p><img src="etecsa-2.jpg">
-        <p><img src="etecsa-3.jpg">
-        <p>From <b>WIFI_ETECSA</b> Series
-        <br>2017
-
-        <p><img src="bed-install.jpg">
-        <p>Installation of <b>Bed (November 2016)</b>
-        <br>2016
-
-        <p><img src="feet.jpg">
-        <p>Untitled Study
-        <br>2016
-
-        <p><img src="ipad.jpg">
-        <p>iPad Studies
-        <br>2016
-
-        <p><img src="shower.jpg">
-        <p>Detail of <b>Shower</b>, video
-        <br>2016
-
-        <p><img src="mystill.jpg">
-        <p>From <b>mystill.life</b> Live-stream
-        <br>2016
+        
     </body>
     <script>
-        $("#currentTime").text(moment().format('h:mm:ssa'));
-        $("#currentDate").text(moment().format('MMMM Do'));
-        setInterval(function() {
-            $("#currentTime").text(moment().format('h:mm:ssa'));
-        }, 1000);
+        var playing = false;
+
+        var onPlay = function() {
+            playing = true;
+
+            $('body').removeClass('light')
+            $('body').addClass('dim');
+
+            $('.button').removeClass('dim');
+            $('.button').addClass('light');
+        }
+
+        var onPause = function() {
+            playing = false;
+
+            $('body').removeClass('dim');
+            $('body').addClass('light');
+
+            $('.button').removeClass('light')
+            $('.button').addClass('dim');
+        }
+
+        var iframe = $('iframe');
+        var player = new Vimeo.Player(iframe);
+
+        player.on('play', onPlay);
+        player.on('pause', onPause);
+        player.on('ended', onPause);
+
+        $('.button').click(function() {
+            if (playing) {
+                player.pause();
+            } else {
+                player.play();
+            }
+            
+        });
     </script>
 </html>
