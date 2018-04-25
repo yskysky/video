@@ -28,7 +28,6 @@ function onYouTubeIframeAPIReady() {
 function onStateChange(event) {
     switch (event.data) {
         case YT.PlayerState.ENDED: 
-        case YT.PlayerState.PAUSED:
             player.playVideo();
             break;
         default:
