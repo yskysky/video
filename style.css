@@ -16,6 +16,7 @@ body {
 
 body.disappear{
     background: #000000;
+    cursor: none;
 }
 
 #cover {

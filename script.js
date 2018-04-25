@@ -42,7 +42,6 @@ $("#text").click(function(){
     player.playVideo();
     setTimeout(function() {
         $('#player').show();
+        $('#cover').remove();
       }, 4500);
-
-    $('#cover').remove();
 });
