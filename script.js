@@ -42,7 +42,7 @@ $("#text").click(function(){
     player.playVideo();
     setTimeout(function() {
         $('#player').show();
-      }, 5000);
+      }, 4500);
 
     $('#cover').remove();
 });

@@ -16,7 +16,6 @@ body {
 
 body.disappear{
     background: #000000;
-    cursor: none;
 }
 
 #cover {
@@ -81,8 +80,4 @@ body.disappear{
 
 iframe {
     pointer-events: none;   
-}
-
-.dim {
-
 }
