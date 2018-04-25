@@ -2,56 +2,40 @@
 <html>
     <head>
         <link href="style.css" rel="stylesheet">
-        <script src="jq.js"></script>
-        <script src="https://player.vimeo.com/api/player.js"></script>
-        <title>Asha Sheshadri</title>
+        <title>Video</title>
     </head>
     <body>
-        <div class="center">
-            <iframe src="https://player.vimeo.com/video/214419891?color=ffffff&title=0&byline=0&portrait=0&background=1&autoplay=0&loop=0&mute=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-        <div class="button">
-        </div>
+        <div id="cover">
+            <div id="textbox">
+                <p id="text">When I'm inside my mind feels small and my body feels big. My mind feels small and my emotions feel big. My hand on my face is a gesture too big for the screen. When I roll over in my bed the neighbors can hear the bed creak, can feel the impact.
 
+                <br>
+                <br>
+
+                When I'm outside you cannot tell if its tears or mist or rain. You cannot tell the difference between a scream and the silence.
+
+                <br>
+                <br>
+
+                When I die in my bed it is a mess. There is blood everywhere and everyone knows. Everyone sees. No one forgets. My body is preserved and lives forever without me.
+
+                <br>
+                <br>
+
+                When I die outside, I disappear. No one hears, no one sees, and no one knows. I am forgotten immediately. My body already become something else.</p>
+            </div>
+            <div id="credits">
+                <p>
+                Performance by Priscilla Gomez Cabrales
+                Score by Chris Norcross
+                Shot, Edited and Directed by Ali Lotz
+                </p>
+            </div>
+        </div>
         
+        <div id="player"></div> 
     </body>
-    <script>
-        var playing = false;
 
-        var onPlay = function() {
-            playing = true;
-
-            $('body').removeClass('light')
-            $('body').addClass('dim');
-
-            $('.button').removeClass('dim');
-            $('.button').addClass('light');
-        }
-
-        var onPause = function() {
-            playing = false;
-
-            $('body').removeClass('dim');
-            $('body').addClass('light');
-
-            $('.button').removeClass('light')
-            $('.button').addClass('dim');
-        }
-
-        var iframe = $('iframe');
-        var player = new Vimeo.Player(iframe);
-
-        player.on('play', onPlay);
-        player.on('pause', onPause);
-        player.on('ended', onPause);
-
-        $('.button').click(function() {
-            if (playing) {
-                player.pause();
-            } else {
-                player.play();
-            }
-            
-        });
-    </script>
+    <script src="jq.js"></script>
+    <script src="script.js"></script>
 </html>
